@@ -1,0 +1,11 @@
+package excel;
+
+import org.openqa.selenium.WebDriver;
+
+public class DataDriven {
+ WebDriver driver;
+ @BeforeClass
+ public void openBrowser () {
+	 driver = new Driverconnection.connect();
+ }
+}

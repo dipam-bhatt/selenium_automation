@@ -1,0 +1,13 @@
+package excel;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeClass;
+
+import DriverConnection.DriverConnect;
+
+public class DataDriven {
+	 WebDriver driver;
+	 @BeforeClass
+	 public void openBrowser () {
+		 driver = new DriverConnect().getConnection("https://www.facebook.com/");
+}

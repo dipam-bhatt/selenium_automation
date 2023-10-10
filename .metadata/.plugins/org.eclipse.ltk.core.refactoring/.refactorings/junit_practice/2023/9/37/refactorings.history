@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;JUnit.Calc&apos; to &apos;CalcTest&apos;&#x0D;&#x0A;- Original project: &apos;junit_practice&apos;&#x0D;&#x0A;- Original element: &apos;JUnit.Calc&apos;&#x0D;&#x0A;- Renamed element: &apos;JUnit.CalcTest&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Calc&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/&lt;JUnit{Calc.java[Calc" matchStrategy="1" name="CalcTest" qualified="false" references="true" similarDeclarations="false" stamp="1694403533322" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,18 @@
+package excel;
+
+public class excelreader {
+	
+	public excelreader(String filePath, String sheetName) {
+		super ();
+		this.filePath = filePath;
+	    this.sheetName = sheetName;
+	}
+	String filePath;
+	String sheetName;
+	
+	public int rowCount() {
+		int i =0;
+		
+	}
+
+}

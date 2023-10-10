@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;Selenium.Selenium_learning.P00_FBTest.java&apos; to &apos;FBTest.java&apos;&#x0D;&#x0A;- Original project: &apos;Selenium-learning&apos;&#x0D;&#x0A;- Original element: &apos;Selenium.Selenium_learning.P00_FBTest.java&apos;&#x0D;&#x0A;- Renamed element: &apos;Selenium.Selenium_learning.FBTest.java&apos;" description="Rename compilation unit &apos;P00_FBTest.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/&lt;Selenium.Selenium_learning{P00_FBTest.java" name="FBTest.java" references="false" stamp="1691986208470" version="1.0"/>
+</session>

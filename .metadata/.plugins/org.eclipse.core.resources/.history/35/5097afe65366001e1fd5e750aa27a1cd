@@ -1,0 +1,28 @@
+package excel;
+
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class excelreader {
+	
+	public excelreader(String filePath, String sheetName) {
+		super ();
+		this.filePath = filePath;
+	    this.sheetName = sheetName;
+	}
+	String filePath;
+	String sheetName;
+	
+	public int rowCount() {
+		int i =0;
+		try {
+			XSSFWorkbook wrokbook = new XSSFWorkbook(filePath);
+			XSSFSheet worksheet = Workbook.getSheet(sheetName);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return i;
+	}
+
+}

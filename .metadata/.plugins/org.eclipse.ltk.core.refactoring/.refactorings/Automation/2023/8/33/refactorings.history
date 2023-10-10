@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Assignment1.Assignmentt&apos; to &apos;Greatest_number&apos;&#x0D;&#x0A;- Original project: &apos;Automation&apos;&#x0D;&#x0A;- Original element: &apos;Assignment1.Assignmentt&apos;&#x0D;&#x0A;- Renamed element: &apos;Assignment1.Greatest_number&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Assignmentt&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;Assignment1{Assignmentt.java[Assignmentt" matchStrategy="1" name="Greatest_number" qualified="false" references="true" similarDeclarations="false" stamp="1692029216293" textual="false" version="1.0"/>
+</session>
