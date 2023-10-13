@@ -1,31 +1,46 @@
 package Selenium.Selenium_learning;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.service.DriverCommandExecutor;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.util.List;
+
+
 
 public class WebTable {
 	public static void main(String[] args) {
 		String url = "https://www.techlistic.com/2017/02/automate-demo-web-table-with-selenium.html";
 		WebDriver driver = new DriverConnection().getConnection(url);
-		WebElement ele = driver.findElement(By.xpath("// table[@id='customers']/tbody/tr[4]/td[3]/span"));
-		System.out.println("ele : >< " + ele.getText());
+	WebElement ele = driver.findElement(By.className("tsc_table_s13"));
 
-		for (int r = 1; r <= 3; r++) {
-			WebElement ele1 = driver.findElement(By.xpath("//table[@id='customers']/tbody/tr[1]/th[" + r + "]/span"));
-			System.out.print(ele1.getText() + " ");
+
+		
+		        List<WebElement> heightElements = driver.findElements(By.xpath("//table[@class='tsc_table_s13']/thead/tr/th[4]")); 
+
+		        int maxHeight = 0;
+		        String tallestStructure = null;
+
+		        for (WebElement element : heightElements) {
+		            int height = Integer.parseInt(element.getText().replaceAll("", "")); 
+		            System.out.println("error");
+		            if (height > maxHeight) {
+		                maxHeight = height;
+		                tallestStructure = element.findElement(By.xpath("//table[@class='tsc_table_s13']/tbody")).getText(); 
+		            }
+		        }
+
+		        
+		        System.out.println("Tallest Structure: " + tallestStructure);
+		        System.out.println("Height: " + maxHeight + "m");
+
+		     
+		    }
 		}
-		System.out.println();
-		for (int r = 2; r <= 7; r++) {
-			for (int c = 1; c <= 3; c++) {
-				WebElement ele1 = driver
-						.findElement(By.xpath("//table[@id='customers']/tbody/tr[" + r + "]/td[" + c + "]/span"));
-				System.out.print(ele1.getText() + " ");
-			}
-			System.out.println();
-		}
 
-	}
 
-}
+		
+
+

@@ -1,0 +1,75 @@
+package Selenium.Selenium_learning;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.util.List;
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.service.DriverCommandExecutor;
+
+public class WebTable {
+	public static void main(String[] args) {
+		String url = "https://www.techlistic.com/2017/02/automate-demo-web-table-with-selenium.html";
+		WebDriver driver = new DriverConnection().getConnection(url);
+//		WebElement ele = driver.findElement(By.className("tsc_table_s13"));
+//
+//WebElement table = driver.findElement(By.id("t01"));
+
+        // Find all rows in the table
+        List<WebElement> rows = table.findElements(By.tagName("tr"));
+
+        // Initialize variables to hold the maximum height and structure name
+        double maxHeight = 0;
+        String maxName = "";
+
+        // Loop through each row in the table, skipping the header row
+        for (int i = 1; i < rows.size(); i++) {
+            // Find all columns in the current row
+            List<WebElement> columns = rows.get(i).findElements(By.tagName("td"));
+
+            // Get the height value from the second column
+            double height = Double.parseDouble(columns.get(1).getText().replace("m", ""));
+
+            // If the current height is greater than the current maximum height, update the maximum
+            if (height > maxHeight) {
+                maxHeight = height;
+                maxName = columns.get(0).getText();
+            }
+        }
+
+        // Print the name and height of the tallest structure
+        System.out.println("The tallest structure is " + maxName + " with a height of " + maxHeight + "m");
+
+//		
+//		        List<WebElement> heightElements = driver.findElements(By.xpath("//table/tbody/tr/td[4]")); 
+//
+//		        int maxHeight = 0;
+//		        String tallestStructure = "";
+//
+//		        for (WebElement element : heightElements) {
+//		            int height = Integer.parseInt(element.getText().replaceAll("[^\\d]", "")); 
+//		            if (height > maxHeight) {
+//		                maxHeight = height;
+//		                tallestStructure = element.findElement(By.xpath("./preceding-sibling::td[3]")).getText(); 
+//		            }
+//		        }
+//
+//		        
+//		        System.out.println("Tallest Structure: " + tallestStructure);
+//		        System.out.println("Height: " + maxHeight + "m");
+
+		     
+		    }
+		}
+
+
+		
+
+

@@ -1,0 +1,53 @@
+package Selenium.Selenium_learning;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.service.DriverCommandExecutor;
+
+public class WebTable {
+	public static void main(String[] args) {
+		String url = "https://www.techlistic.com/2017/02/automate-demo-web-table-with-selenium.html";
+		WebDriver driver = new DriverConnection().getConnection(url);
+		WebElement ele = driver.findElement(By.class("tsc_table_s13"));
+		
+		import org.openqa.selenium.By;
+		import org.openqa.selenium.WebDriver;
+		import org.openqa.selenium.WebElement;
+		import org.openqa.selenium.chrome.ChromeDriver;
+		import java.util.List;
+
+	
+
+		        List<WebElement> heightElements = driver.findElements(By.xpath("//table/tbody/tr/td[4]")); // Assuming height values are in the fourth column
+
+		        // Variables to store the maximum height and the corresponding structure name
+		        int maxHeight = 0;
+		        String tallestStructure = "";
+
+		        // Iterate through height elements to find the tallest structure
+		        for (WebElement element : heightElements) {
+		            int height = Integer.parseInt(element.getText().replaceAll("[^\\d]", "")); // Extracting numeric values from the height element
+		            if (height > maxHeight) {
+		                maxHeight = height;
+		                tallestStructure = element.findElement(By.xpath("./preceding-sibling::td[3]")).getText(); // Getting the corresponding structure name
+		            }
+		        }
+
+		        // Print the tallest structure and its height
+		        System.out.println("Tallest Structure: " + tallestStructure);
+		        System.out.println("Height: " + maxHeight + "m");
+
+		        // Close the WebDriver
+		        driver.quit();
+		    }
+		}
+
+
+		}
+
+	}
+
+
